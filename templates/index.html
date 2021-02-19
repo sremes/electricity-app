@@ -1,15 +1,22 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
     <title>Electricity consumption</title>
-    <script type="module" src="{{ url_for('static', filename='script.js') }}"></script>
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.7.3/firebase-ui-auth.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css" />
+
+    <script type="module" src="{{ url_for('static', filename='main.js') }}"></script>
 </head>
 
 <body>
 
     <h1>Electricity</h1>
+
+    <div id="firebaseui-auth-container"></div>
+    <button onclick="resetZoom()">Reset Zoom</button>
+    <canvas id="chart" width="800" , height="600"></canvas>
 
 </body>
 
